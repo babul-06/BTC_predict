@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import time
-import yfinance as yf
+#import yfinance as yf
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential, load_model
 from keras.layers import LSTM, Dense, Dropout
