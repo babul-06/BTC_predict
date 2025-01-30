@@ -1,0 +1,24 @@
+name: Run BTC Prediction
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install scikit-learn keras tensorflow requests textblob binance datetime
+
+      - name: Run BTC Prediction Script
+        run: python btc_predict.py
