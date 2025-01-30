@@ -18,7 +18,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install scikit-learn keras tensorflow requests textblob binance datetime
+          pip install scikit-learn keras tensorflow requests textblob binance datetime pandas
 
       - name: Run BTC Prediction Script
         run: python LSTM2.py
